@@ -17,3 +17,4 @@ class MahasiswaController extends Controller
         return view('mahasiswa', compact('mahasiswa'));
     }
 }
+// TUGAS 2 ELERNING

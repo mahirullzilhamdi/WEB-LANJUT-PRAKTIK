@@ -1,8 +1,15 @@
 <?php
 
 use App\Http\Controllers\produkController;
-use App\Http\Controllers\MahasiswaController;
 use Illuminate\Support\Facades\Route;
+// TUGAS 2 ELERNING
+use App\Http\Controllers\MahasiswaController;
+//BAB 6
+use App\Http\Controllers\KaryawanController;
+//TUGAS 3
+use App\Http\Controllers\ProfilController;
+
+/////////////////////////////////////////////////////////////////////////////////////////
 
 Route::get('/welcome', function () {
     echo "Welcome";
@@ -13,15 +20,15 @@ Route::get('/get-test', function () {
 });
 
 Route::post('/store', function () {
-    // sintak untuk menyimpan data
+    //
 });
 
 Route::put('/update', function () {
-    // sintak untuk memperbarui data
+    //
 });
 
 Route::delete('/delete', function () {
-    // sintak untuk menghapus data
+    //
 });
 
 Route::match(['get', 'post'], '/welcome', function () {
@@ -48,8 +55,17 @@ Route::get('/create', function () {
     echo "Route diakses menggunakan nama";
 })->name('create');
 
-Route::get('/produk', [produkController::class, 'index']);
+//////////////////////////////////////////////////////////////////////////////////////
 
 Route::get('/produk', [produkController::class, 'index']);
 
+Route::get('/produk', [produkController::class, 'index']);
+
+// TUGAS 2 ELERNING
 Route::get('/mahasiswa', [MahasiswaController::class, 'index']);
+
+//BAB 6
+Route::get('/pegawai', [KaryawanController::class, 'index']);
+
+//TUGAS 3
+Route::get('/profil', [ProfilController::class, 'index']);
